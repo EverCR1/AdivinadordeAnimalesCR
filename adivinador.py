@@ -21,14 +21,18 @@ class Arbol:
 # -----------------------------------------------------------
 
 def si(preg):
-    from string import lower
-    resp = lower(raw_input(preg))
+
+    resp = input(preg)
     return (resp[0] == 's')
 
 
 # -----------------------------------------------------------
 
 def main():
+
+
+    print("Probando el versionamiento de código - CR")
+
     bucle = True
     raiz = Arbol("pajaro")
     while bucle:
@@ -48,9 +52,17 @@ def main():
             "Soy el más grande!"
             continue
 
+
+
+
+
+
+
+
+
         # obtener informacion
-        nuevo = raw_input("Qué animal era? ")
-        info = raw_input("Qué diferencia a un " + animal + " de un " + nuevo + "? ")
+        nuevo = input("Qué animal era? ")
+        info = input("Qué diferencia a un " + animal + " de un " + nuevo + "? ")
         indicador = "Si el animal fuera un " + animal + " cual seria la respuesta? "
         arbol.carga = info
         if si(indicador):
